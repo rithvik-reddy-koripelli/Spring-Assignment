@@ -1,0 +1,53 @@
+1 @Required
+This annotation is applied to setter methods. For the fields that are essential for instantiation, this annotation is used. The fields are populated at configuration time. If the field is not populated, it raises BeanInitializationException.
+
+
+2 @Scope
+This annotation specifies the scope of the bean. It can be a singleton, session, prototype, request etc.
+
+3 @Component
+This annotation is used to define a bean.
+
+
+4 @Autowired
+This annotation can be applied to constructors, setter methods and fields. This annotation tells spring to provide the given method/constructor/field with the given type of bean. 
+
+5 @Primary
+This annotation is used to give preference to the beans that are to be autowired. This would enable more control to the developer on autowiring.
+
+
+6 @Qualifier
+This annotation is used for having more control on the bean to be selected for auto-wiring. The bean with the qualified name will be auto-wired. 
+
+7 @Resource
+This annotation is used to inject bean into a method/field based on the name of the bean provided to the @Resource annotation. If no bean is found with the given name, then it tries to inject the bean that matches the required type. 
+
+
+8 @PostConstruct
+This annotation tells spring to execute the method annotated with @PostConstruct after the bean is created and DI is completed.
+
+9 @PreDestroy
+This annotation is used to specify spring to execute the following method before the bean is destroyed from spring context.
+
+10 @Lazy
+This annotation is used to create the bean when it is accessed instead of creating it during startup.
+
+
+11 @DependsOn
+This annotation is used to specify that the bean is dependent on the other bean for its creation. This ensures that the dependent bean is created after the bean specified in the annotation.
+
+12 @ComponentScan
+This annotation is used to scan the given packages and register all the bean definitions with the application context.
+
+
+13 @RequestMapping
+This is a spring mvc annotation applied to a method. This annotation maps the URL pattern with the method to be called.
+
+
+14 @RequestParam
+This is a spring mvc annotation which maps the given request parameter to the method argument so that the method can have access to the request parameter.
+
+
+15 @SessionAttributes
+This is a spring mvc annotation that specifies that the given model attributes should be stored in a session.
+
